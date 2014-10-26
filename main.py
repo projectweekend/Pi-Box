@@ -15,8 +15,12 @@ class Dropbox(object):
 
     def get_delta(self):
         if self.delta_cursor:
-            return self.client.delta(cursor=self.delta_cursor)
-        return self.client.delta(cursor=None)
+            response = self.client.delta(cursor=self.delta_cursor)
+        else:
+            response = self.client.delta(cursor=None)
+
+        self.delta_cursor = response['cursor']
+        return response
 
     def get_file(self, from_path):
         path_parts = from_path.split('/')
