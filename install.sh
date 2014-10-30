@@ -13,6 +13,4 @@ cp ./install/pi-box.conf /etc/init
 mkdir /opt/Pi-Box
 cp ./main.py /opt/Pi-Box
 
-# Clean up
-rm -r /home/pi/Pi-Box
-mkdir /home/pi/Pi-Box
+# Prompt user for a path here...save it in upstart script
