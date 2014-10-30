@@ -3,7 +3,7 @@ import sys
 
 if not os.path.exists('/opt/Pi-Box/dropbox.txt'):
 	print('Dropbox token file (dropbox.txt) not found.')
-	print('Go here to authorize Pi-Box and obtain the token file: blah, blah, blah')
+	print('Authorize Pi-Box and obtain the token file: blah, blah, blah')
 	print('Save the file in: /opt/Pi-Box')
 	print('Run the installation script again: ./install.sh')
 	sys.exit()
