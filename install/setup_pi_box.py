@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 
 if not os.path.exists('/opt/Pi-Box/dropbox.txt'):
 	print('Dropbox token file (dropbox.txt) not found.')
@@ -8,6 +9,10 @@ if not os.path.exists('/opt/Pi-Box/dropbox.txt'):
 	print('Run the installation script again: ./install.sh')
 	sys.exit()
 
+if not os.path.exists('/opt/Pi-Box'):
+	os.makedirs('/opt/Pi-Box')
+
+shutil.copy('./main.py', '/opt/Pi-Box')
 
 print("Example Pi Box path: /home/username/my-pi-box")
 pi_box_directory = raw_input("Pi Box path: ")
