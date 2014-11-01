@@ -5,7 +5,7 @@ import gevent
 from dropbox.client import DropboxClient
 
 
-DROPBOX_TOKEN = os.getenv('DROPBOX_TOKEN')
+DROPBOX_TOKEN_FILE = os.getenv('DROPBOX_TOKEN_FILE')
 DELTA_CURSOR_FILE = os.getenv('DELTA_CURSOR_FILE')
 PI_BOX_ROOT = os.getenv('PI_BOX_ROOT')
 
@@ -54,7 +54,10 @@ class PiBox(object):
 
 
 def main():
-    pi_box = PiBox(dropbox_token=DROPBOX_TOKEN,
+    with open(DROPBOX_TOKEN_FILE, 'r') as f:
+        dropbox_token = f.read()
+
+    pi_box = PiBox(dropbox_token=dropbox_token,
                     pi_box_root=PI_BOX_ROOT,
                     delta_cursor_file=DELTA_CURSOR_FILE)
 
