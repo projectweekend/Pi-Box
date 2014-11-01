@@ -8,9 +8,8 @@ if not os.path.exists('/opt/Pi-Box'):
 shutil.copy('./main.py', '/opt/Pi-Box')
 
 if not os.path.exists('/opt/Pi-Box/dropbox.txt'):
-	print('Dropbox token file (dropbox.txt) not found.')
-	print('Authorize Pi-Box and obtain the token file: blah, blah, blah')
-	print('Save the file in: /opt/Pi-Box')
+	print('Authorize Pi-Box and obtain the token file: http://raspberry-pi-box.herokuapp.com/')
+	print('Copy Dropbox token file (dropbox.txt) to: /opt/Pi-Box.')
 	print('Run the installation script again: ./install.sh')
 	sys.exit()
 
