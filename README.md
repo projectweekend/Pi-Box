@@ -1,5 +1,9 @@
+I know what the headline above says: "Transfer files to a Raspberry Pi using Dropbox". Truthfully there is nothing in this project that is specific to that platform. I made this because there is no Dropbox implementation for the Raspberry Pi and I find it to be an extremly handy way to copy files between computers without having to mess with `scp`, `ftp`, etc.
+
+-------------------------------------------------------------------------------
+
 ## Installation & Setup
-The following instructions cover everything necessary to setup your Raspberry Pi for this project. I tried to script out a good chunk of system installation stuff to help keep things fairly simple. With that said, I welcome feedback about how to make this better.
+The following instructions cover everything necessary to get started using this project. I tried to script out a good chunk of system installation stuff to help keep things fairly simple. With that said, I welcome feedback about how to make this better.
 
 #### Step 1: Clone this repository
 
@@ -23,7 +27,7 @@ The install script will also prompt you to authorize your Dropbox account using 
 
 ## Using Pi-Box
 
-After authorizing your Dropbox account, a new folder will appear in your Dropbox: `/apps/RaspberryPi Box`. Any file saved in this folder will be synced to your Raspberry Pi in directory you specified during the installation step. For now the file syncing is just one-way. This first iteration was intended as an easy way to move files to the Raspberry Pi without having to mess with `scp` or `ftp`.
+After authorizing your Dropbox account, a new folder will appear in your Dropbox: `/apps/RaspberryPi Box`. Any file saved in this folder will be synced to your Raspberry Pi in directory you specified during the installation step. For now the file syncing is just one-way.
 
 -------------------------------------------------------------------------------
 
