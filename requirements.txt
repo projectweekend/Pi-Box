@@ -1,5 +1,5 @@
 dropbox==2.2.0
 gevent==1.0.1
 greenlet==0.4.5
-urllib3==1.9.1
+urllib3==1.26.5
 wsgiref==0.1.2
